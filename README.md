@@ -14,3 +14,4 @@
 -   [x] Menerapkan Prettier
 -   [x] Menerapkan Prettier Tailwind
 -   [x] Fix Code Axios
+-   [x] Change Flowbite Modal to DaisyUI modal

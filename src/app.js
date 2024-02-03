@@ -1,4 +1,3 @@
-import 'flowbite';
 import './styles/style.css';
 import ViewData from './scripts/view/main';
 
