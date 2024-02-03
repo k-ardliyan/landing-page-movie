@@ -4,7 +4,6 @@ import {
     convertRoundNumber,
     limitText,
 } from '../utils/utils';
-import { Modal } from 'flowbite';
 
 class MovieItem extends HTMLElement {
     set movie(movie) {

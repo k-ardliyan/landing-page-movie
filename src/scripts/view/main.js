@@ -25,9 +25,8 @@ const fecthMovieTrending = async () => {
 const showSearchResult = (query) => {
     searchSectionElement.classList.remove('hidden');
     searchSectionElement.scrollIntoView({ behavior: 'smooth' });
-    searchSectionElement.querySelector(
-        'h2'
-    ).textContent = `Result for "${query}"`;
+    searchSectionElement.querySelector('h2').textContent =
+        `Result for "${query}"`;
     navbarElement.emptyInput();
 };
 

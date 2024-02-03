@@ -1,66 +1,96 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>MyMovieList</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyMovieList</title>
-</head>
+    <body>
+        <header class="bg-gray-50">
+            <nav-bar></nav-bar>
 
-<body>
+            <section
+                class="flex min-h-screen items-center bg-white dark:bg-gray-900"
+            >
+                <div class="mx-auto max-w-screen-xl px-4 pt-16 text-center">
+                    <h1
+                        class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 dark:text-white md:text-5xl lg:text-6xl"
+                    >
+                        Welcome to MML
+                    </h1>
+                    <p
+                        class="mb-8 text-lg font-normal text-gray-500 dark:text-gray-400 sm:px-16 lg:px-48 lg:text-xl"
+                    >
+                        Jelajahi film-film yang hype dari sini.
+                    </p>
 
-    <header class="bg-gray-50">
-        <nav-bar></nav-bar>
-
-        <section class="bg-white dark:bg-gray-900 min-h-screen flex items-center">
-            <div class="pt-16 px-4 mx-auto max-w-screen-xl text-center">
-                <h1
-                    class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
-                    Welcome to MML</h1>
-                <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-400">
-                    Jelajahi film-film yang hype dari sini.</p>
-
-
-                <div class="flex justify-center">
-                    <button id="searchButtonHero" type="button"
-                        class="px-6 py-3 text-lg font-semibold text-white bg-teal-600 rounded-lg hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2">
-                        Search
-                    </button>
+                    <div class="flex justify-center">
+                        <button
+                            id="searchButtonHero"
+                            type="button"
+                            class="rounded-lg bg-teal-600 px-6 py-3 text-lg font-semibold text-white hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
+                        >
+                            Search
+                        </button>
+                    </div>
                 </div>
+            </section>
+        </header>
 
-            </div>
-        </section>
-    </header>
-
-    <main>
-        <section id="searchSection" class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8 hidden">
-            <h2 class="text-2xl md:text-4xl font-extrabold dark:text-white mb-4">Searching Result</h2>
-            <search-result id="movieResult"
-                class="flex flex-no-wrap overflow-x-scroll scrolling-touch items-start mb-8">
-            </search-result>
-        </section>
-        <section id="containerTrending" class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8 bg-gray-100">
-            <h2 class="text-2xl md:text-4xl font-extrabold dark:text-white mb-4">Trending Today🔥</h2>
-            <movie-list id="movieTrending" class="flex flex-no-wrap overflow-x-scroll scrolling-touch items-start mb-8">
-            </movie-list>
-        </section>
-    </main>
-
-    <footer class="bg-gray-100">
-        <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
-            <div class="sm:flex sm:items-center sm:justify-between">
-                <div class="flex justify-center text-gray-900 sm:justify-start items-center gap-2">
-                    <img class="h-8 w-auto sm:h-10" src="mymovielist-logo.png" alt="MyMovieList">
-                    <span>MyMovieList</span>
+        <main>
+            <section
+                id="searchSection"
+                class="mx-auto hidden max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8"
+            >
+                <h2
+                    class="mb-4 text-2xl font-extrabold dark:text-white md:text-4xl"
+                >
+                    Searching Result
+                </h2>
+                <search-result
+                    id="movieResult"
+                    class="flex-no-wrap scrolling-touch mb-8 flex items-start overflow-x-scroll"
+                >
+                </search-result>
+            </section>
+            <section id="containerTrending" class="bg-gray-100">
+                <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
+                    <h2
+                        class="mb-4 text-2xl font-extrabold dark:text-white md:text-4xl"
+                    >
+                        Trending Today🔥
+                    </h2>
+                    <movie-list
+                        id="movieTrending"
+                        class="flex-no-wrap scrolling-touch mb-8 flex items-start overflow-x-scroll"
+                    >
+                    </movie-list>
                 </div>
+            </section>
+        </main>
 
-                <p class="mt-4 text-center text-sm text-gray-500 lg:mt-0 lg:text-right">
-                    Copyright &copy; 2024. All rights reserved.
-                </p>
+        <footer class="bg-gray-100">
+            <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
+                <div class="sm:flex sm:items-center sm:justify-between">
+                    <div
+                        class="flex items-center justify-center gap-2 text-gray-900 sm:justify-start"
+                    >
+                        <img
+                            class="h-8 w-auto sm:h-10"
+                            src="mymovielist-logo.png"
+                            alt="MyMovieList"
+                        />
+                        <span>MyMovieList</span>
+                    </div>
+
+                    <p
+                        class="mt-4 text-center text-sm text-gray-500 lg:mt-0 lg:text-right"
+                    >
+                        Copyright &copy; 2024. All rights reserved.
+                    </p>
+                </div>
             </div>
-        </div>
-    </footer>
-
-</body>
-
+        </footer>
+    </body>
 </html>

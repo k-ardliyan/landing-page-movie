@@ -8,12 +8,12 @@ const convertRoundNumber = (number) => {
 };
 
 const convertTime = (time) => {
-    if (menit < 0) {
+    if (time < 0) {
         return 'Masukkan nilai menit yang valid (>= 0)';
     }
 
-    const jam = Math.floor(menit / 60);
-    const sisaMenit = menit % 60;
+    const jam = Math.floor(time / 60);
+    const sisaMenit = time % 60;
 
     const hasil = `${jam}h ${sisaMenit}m`;
     return hasil;
